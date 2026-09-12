@@ -1,332 +1,958 @@
-<!doctype html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portofolio Keisya Halimah Mulia: UI/UX, frontend development, dan creative design."
-    />
-    <title>Keisya's | Portfolio</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Lewati navigasi</a>
-    <div class="desktop">
-      <header class="browser">
-        <div class="titlebar">
-          <span>Keisya's | Portfolio</span
-          >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kaisar Hanif - My Page</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= DESKTOP ================= -->
+
+    <main class="desktop">
+
+        <!-- Desktop Icons -->
+
+        <div class="desktop-icons">
+
+            <!-- MY COMPUTER -->
+
+            <button class="desktop-icon" onclick="openWindow('computerWindow')">
+                <div class="icon-image">🖥️</div>
+                <span>My Computer</span>
+            </button>
+
+
+            <!-- MY DOCUMENTS -->
+
+            <button class="desktop-icon" onclick="openWindow('aboutWindow')">
+                <div class="icon-image">📁</div>
+                <span>My Documents</span>
+            </button>
+
+
+            <!-- INTERNET EXPLORER -->
+
+            <button class="desktop-icon" onclick="openWindow('contactWindow')">
+                <div class="icon-image">🌐</div>
+                <span>Internet Explorer</span>
+            </button>
+
+
+            <!-- MY CV -->
+
+            <button class="desktop-icon" onclick="openWindow('cvWindow')">
+                <div class="icon-image">📄</div>
+                <span>My CV</span>
+            </button>
+
         </div>
-        <nav class="menu" aria-label="Navigasi utama">
-          <a href="./index.html" aria-current="page">Home</a
-          ><a href="#about">About</a><a href="#tools">Tools</a
-          ><a href="#services">Services</a><a href="#projects">Projects</a
-          ><a href="#contact">Contact</a><a href="./cv.html">My CV</a>
-        </nav>
-      </header>
-      <main id="main">
-        <section class="hero" id="home">
-          <p class="eyebrow">WELCOME TO MY LITTLE CORNER OF THE INTERNET</p>
-          <h1>Hi, I'm Keisya!</h1>
-          <div class="hero-bottom">
-            <p>
-              IT student. Creative thinker.<br />Turning ideas into pixels &amp;
-              possibilities.
-            </p>
-            <a class="button" href="./cv.html">Lihat Creative CV</a>
-          </div>
-        </section>
-        <div class="scrapbook">
-          <section class="intro-grid" id="about" aria-label="Tentang Keisya">
-            <div class="portrait-stack">
-              <div class="window portrait-window">
-                <div class="portrait-canvas">
-                  <img
-                    src="./assets/profile.png"
-                    alt="Keisya Halimah Mulia"
-                  />
-                </div>
-              </div>
-              <div class="mini-cards">
-                <div class="note">
-                  <span class="eyebrow">CURRENTLY INTO</span
-                  ><strong>Design, code<br />&amp; JKT48 </strong>
-                </div>
-                <a class="note" href="#projects"
-                  ><span class="eyebrow">MY FAVORITE FOLDER</span
-                  ><strong>Selected works</strong
-                  ><span>Click to explore &#8599;</span></a
-                >
-              </div>
-            </div>
-            <article class="about-note paper">
-              <p class="eyebrow">ABOUT_ME.TXT</p>
-              <h2>A little bit<br />of <em>my world.</em></h2>
-              <p>
-                Halo! Kenalin, aku Keisya. Mahasiswa Teknologi Informasi yang
-                nemu “dunia baru” di web design dan UI/UX. Dari bikin poster
-                organisasi sejak SMP–SMA, sekarang naik level bikin website.
-              </p>
-              <p>
-                Aku suka ngulik auto-layout di Figma, meracik interaksi di
-                Framer, dan menggabungkan logika coding dengan visual yang
-                cakep. Buatku, desain harus punya fondasi rapi dan nyaman
-                dipakai.
-              </p>
-              <p>
-                Di luar wireframing dan kejar deadline, JKT48 jadi moodbooster
-                saat mentok cari inspirasi atau debugging tengah malam.
-              </p>
-              <a class="button" href="./cv.html"
-                >Read my creative CV &#8594;</a
-              >
-            </article>
-          </section>
-          <section class="tools-section" id="tools">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow">THE CREATIVE TOOLBOX</p>
-                <h2>My everyday essentials.</h2>
-              </div>
-            </div>
-            <div class="tools-grid">
-              <p class="tool">Figma</p>
-              <p class="tool">Framer</p>
-              <p class="tool">GitHub</p>
-              <p class="tool">Vercel</p>
-              <p class="tool">Canva</p>
-              <p class="tool">AI Prompts</p>
-              <p class="tool">CSS &amp; Tailwind</p>
-              <p class="tool">VS Code &amp; React</p>
-            </div>
-          </section>
-          <section class="services-section" id="services">
-            <div class="window service-intro">
-              <div class="titlebar">
-                <span>What I do</span>
-              </div>
-              <div class="panel-body">
-                <h2>A little logic.<br />A lot of <em>creativity.</em></h2>
-                <p>
-                  Dari ide pertama sampai detail terakhir, aku membantu
-                  merancang pengalaman digital yang enak dilihat dan digunakan.
+
+
+        <!-- ================= WELCOME TEXT ================= -->
+
+        <section class="welcome">
+
+            <div class="welcome-box">
+
+                <p class="small-text">
+                    WELCOME TO
                 </p>
-                <a class="button" href="#contact"
-                  >Let's work together &#8599;</a
-                >
-              </div>
+
+                <h1>
+                    Kaisar's
+                    <span>My Page</span>
+                </h1>
+
+                <p>
+                    Welcome to my personal corner of the internet.
+                </p>
+
+                <p class="typing">
+                    Informatics Student • Developer • Tech Enthusiast
+                </p>
+
             </div>
-            <div class="service-list">
-              <article>
-                <span>01</span>
-                <div>
-                  <h3>UI/UX &amp; Responsive Design</h3>
-                  <p>
-                    Wireframe dan prototipe Figma yang intuitif, konsisten, dan
-                    mudah dinavigasi di berbagai layar.
-                  </p>
-                </div>
-              </article>
-              <article>
-                <span>02</span>
-                <div>
-                  <h3>Frontend Web Development</h3>
-                  <p>
-                    Menerjemahkan mock-up menjadi antarmuka interaktif
-                    menggunakan HTML, CSS, dan JavaScript.
-                  </p>
-                </div>
-              </article>
-              <article>
-                <span>03</span>
-                <div>
-                  <h3>Database &amp; System Logic</h3>
-                  <p>
-                    Perancangan ERD, alur data, dan normalisasi dengan dasar
-                    SQL.
-                  </p>
-                </div>
-              </article>
-              <article>
-                <span>04</span>
-                <div>
-                  <h3>Creative Visual &amp; Branding</h3>
-                  <p>
-                    Banner, publikasi, dan aset visual yang selaras dengan
-                    identitas brand serta GSM.
-                  </p>
-                </div>
-              </article>
-              <article>
-                <span>05</span>
-                <div>
-                  <h3>QA &amp; Usability Testing</h3>
-                  <p>
-                    Mengecek bug, fungsi tombol, dan alur navigasi agar
-                    pengalaman pengguna berjalan lancar.
-                  </p>
-                </div>
-              </article>
+
+        </section>
+
+
+        <!-- ================= RECYCLE BIN ================= -->
+
+        <button
+            class="desktop-icon recycle"
+            onclick="openWindow('recycleWindow')">
+
+            <div class="icon-image">
+                🗑️
             </div>
-          </section>
-          <section id="projects">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow">A FEW THINGS I'VE MADE</p>
-                <h2>Inside my projects folder.</h2>
-              </div>
+
+            <span>Recycle Bin</span>
+
+        </button>
+
+
+        <!-- ================= WINDOWS ================= -->
+
+
+        <!-- MY COMPUTER WINDOW -->
+
+        <div
+            class="window"
+            id="computerWindow">
+
+            <div class="title-bar">
+
+                <div class="title">
+                    🖥️ My Computer
+                </div>
+
+                <div class="window-buttons">
+
+                    <button onclick="minimizeWindow('computerWindow')">
+                        _
+                    </button>
+
+                    <button onclick="maximizeWindow('computerWindow')">
+                        □
+                    </button>
+
+                    <button onclick="closeWindow('computerWindow')">
+                        X
+                    </button>
+
+                </div>
+
             </div>
-            <div class="project-grid">
-              <a
-                class="project window"
-                href="https://keisyaahm.framer.website/project5gerex"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div class="titlebar"><span>01 &mdash; gerigi_2026.png</span><span aria-hidden="true">&#8599;</span></div>
-                <img
-                  src="./assets/gerigi.png"
-                  alt="Desain website Gerigi X UKM Expo 2026"
-                  loading="lazy"
-                />
-                <div class="project-caption">
-                  <p>WEB DESIGN · UI/UX</p>
-                  <h3>Gerigi X UKM Expo 2026</h3>
-                </div>
-              </a>
-              <a
-                class="project window"
-                href="https://keisyaahm.framer.website/project1evastra"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div class="titlebar"><span>02 &mdash; evastra.png</span><span aria-hidden="true">&#8599;</span></div>
-                <img
-                  src="./assets/evastra.png"
-                  alt="Proyek Evastra, web angkatan Teknologi Informasi ITS 2025"
-                  loading="lazy"
-                />
-                <div class="project-caption">
-                  <p>FRONTEND DEVELOPMENT · UI/UX</p>
-                  <h3>Evastra — Web Angkatan TI ITS 2025</h3>
-                </div>
-              </a>
-              <a
-                class="project window"
-                href="https://keisyaahm.framer.website/project2ara"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div class="titlebar"><span>03 &mdash; ara_7.0.png</span><span aria-hidden="true">&#8599;</span></div>
-                <img
-                  src="./assets/ara.png"
-                  alt="Desain website A Renewal Agent 7.0"
-                  loading="lazy"
-                />
-                <div class="project-caption">
-                  <p>WEB DESIGN</p>
-                  <h3>A Renewal Agent (ARA) 7.0</h3>
-                </div>
-              </a>
-              <a
-                class="project window"
-                href="https://keisyaahm.framer.website/project3porto"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div class="titlebar"><span>04 &mdash; personal_portfolio.png</span><span aria-hidden="true">&#8599;</span></div>
-                <img
-                  src="./assets/portfolio.png"
-                  alt="Website portofolio Keisya Halimah Mulia"
-                  loading="lazy"
-                />
-                <div class="project-caption">
-                  <p>WEB DESIGN</p>
-                  <h3>Keisya Halimah Mulia — Portfolio</h3>
-                </div>
-              </a>
-              <a
-                class="project window"
-                href="https://keisyaahm.framer.website/project4solits"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div class="titlebar"><span>05 &mdash; solits.png</span><span aria-hidden="true">&#8599;</span></div>
-                <img
-                  src="./assets/solits.png"
-                  alt="Karya creative dan graphic design Ini Lho ITS! X FORDA SOLITS"
-                  loading="lazy"
-                />
-                <div class="project-caption">
-                  <p>CREATIVE · GRAPHIC DESIGN</p>
-                  <h3>Ini Lho ITS! X FORDA SOLITS</h3>
-                </div>
-              </a>
-              <div class="more-work paper">
-                <h3>There's more<br />in the folder!</h3>
-                <p>Kumpulan eksplorasi visual dan karya kreatif lainnya.</p>
-                <a
-                  class="button"
-                  href="https://canva.link/smrp224t33h97mp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Open another portfolio &#8599;</a
-                >
-              </div>
+
+
+            <div class="toolbar">
+
+                <button onclick="openWindow('aboutWindow')">
+                    📁 About Me
+                </button>
+
+                <button onclick="openWindow('projectWindow')">
+                    📂 Projects
+                </button>
+
+                <button onclick="openWindow('skillWindow')">
+                    💻 Skills
+                </button>
+
             </div>
-          </section>
-          <section class="contact window" id="contact">
-            <div class="titlebar">
-              <span>New message — let's create something</span
-              >
+
+
+            <div class="window-content">
+
+                <h2>
+                    My Computer
+                </h2>
+
+                <p>
+                    Welcome to my computer.
+                    Select a folder to explore my page.
+                </p>
+
+
+                <div class="folder-grid">
+
+                    <button
+                        class="folder"
+                        onclick="openWindow('aboutWindow')">
+
+                        <span>📁</span>
+                        <strong>About Me</strong>
+
+                    </button>
+
+
+                    <button
+                        class="folder"
+                        onclick="openWindow('projectWindow')">
+
+                        <span>📂</span>
+                        <strong>Projects</strong>
+
+                    </button>
+
+
+                    <button
+                        class="folder"
+                        onclick="openWindow('skillWindow')">
+
+                        <span>💻</span>
+                        <strong>Skills</strong>
+
+                    </button>
+
+
+                    <button
+                        class="folder"
+                        onclick="openWindow('cvWindow')">
+
+                        <span>📄</span>
+                        <strong>My CV</strong>
+
+                    </button>
+
+                </div>
+
             </div>
-            <div class="contact-body">
-              <div>
-                <p class="eyebrow">GOT AN IDEA?</p>
-                <h2>Let's make it <em>happen.</em></h2>
-                <a class="email" href="mailto:itssmekeisya@gmail.com"
-                  >itssmekeisya@gmail.com &#8599;</a
-                >
-              </div>
-              <nav class="social-links" aria-label="Media sosial">
-                <a
-                  class="button"
-                  href="https://github.com/keisyaahm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub &#8599;</a
-                ><a
-                  class="button"
-                  href="https://www.instagram.com/keisyaahm/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Instagram &#8599;</a
-                ><a
-                  class="button"
-                  href="https://www.linkedin.com/in/keisyahalimahmulia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >LinkedIn &#8599;</a
-                >
-              </nav>
+
+            <div class="status-bar">
+                4 objects
             </div>
-          </section>
-          <footer class="page-footer">
-            <a href="https://keisyaahm.framer.website/"
-              >Original portfolio &#8599;</a>
-          </footer>
+
         </div>
-      </main>
-    </div>
-    <footer class="taskbar">
-      <a class="start" href="./index.html">
-        <img src="./assets/windows-xp.png" width="23" alt="" />
-        start
-      </a>
-      <a class="task active" href="./index.html" aria-current="page">&#128193; Keisya's World</a>
-      <a class="task" href="./cv.html">&#128196; My CV</a>
-      <span class="tray">Praktikum Pemrograman Website &middot; 2026</span>
-    </footer>
-  </body>
+
+
+        <!-- ================= ABOUT WINDOW ================= -->
+
+        <div
+            class="window"
+            id="aboutWindow">
+
+            <div class="title-bar">
+
+                <div class="title">
+                    📁 My Documents - About Me
+                </div>
+
+                <div class="window-buttons">
+
+                    <button onclick="minimizeWindow('aboutWindow')">
+                        _
+                    </button>
+
+                    <button onclick="maximizeWindow('aboutWindow')">
+                        □
+                    </button>
+
+                    <button onclick="closeWindow('aboutWindow')">
+                        X
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="window-content about-content">
+
+                <div class="profile">
+
+                    <div class="profile-picture">
+                        <img
+                            src="assets/profile.jpg"
+                            alt="Kaisar Hanif">
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Kaisar Hanif Pratama
+                        </h2>
+
+                        <p class="blue-text">
+                            Informatics Student
+                        </p>
+
+                        <p>
+                            Hello! My name is Kaisar Hanif Pratama.
+                            I am an Informatics student who is interested
+                            in technology and software development.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <hr>
+
+
+                <h3>
+                    About Me
+                </h3>
+
+                <p>
+                    I enjoy learning about web development,
+                    Internet of Things, networking, databases,
+                    and programming.
+                </p>
+
+                <p>
+                    I like exploring new technologies and
+                    creating projects that combine creativity
+                    with technology.
+                </p>
+
+
+                <div class="info-table">
+
+                    <div>
+                        <strong>Name</strong>
+                        <span>Kaisar Hanif Pratama</span>
+                    </div>
+
+                    <div>
+                        <strong>Major</strong>
+                        <span>Informatics</span>
+                    </div>
+
+                    <div>
+                        <strong>Interest</strong>
+                        <span>Technology & Development</span>
+                    </div>
+
+                    <div>
+                        <strong>Status</strong>
+                        <span>Student</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="status-bar">
+                My Documents
+            </div>
+
+        </div>
+
+
+        <!-- ================= PROJECT WINDOW ================= -->
+
+        <div
+            class="window"
+            id="projectWindow">
+
+            <div class="title-bar">
+
+                <div class="title">
+                    📂 My Projects
+                </div>
+
+                <div class="window-buttons">
+
+                    <button onclick="minimizeWindow('projectWindow')">
+                        _
+                    </button>
+
+                    <button onclick="maximizeWindow('projectWindow')">
+                        □
+                    </button>
+
+                    <button onclick="closeWindow('projectWindow')">
+                        X
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="toolbar">
+
+                <button>
+                    ← Back
+                </button>
+
+                <button>
+                    🔍 Search
+                </button>
+
+            </div>
+
+
+            <div class="window-content">
+
+                <h2>
+                    My Projects
+                </h2>
+
+                <div class="project-list">
+
+
+                    <article class="project">
+
+                        <div class="project-icon">
+                            📡
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                IoT Project
+                            </h3>
+
+                            <p>
+                                ESP32 based Internet of Things
+                                project using sensors and
+                                electronic components.
+                            </p>
+
+                            <small>
+                                ESP32 • IoT • Sensors
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="project">
+
+                        <div class="project-icon">
+                            🌐
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Web Development
+                            </h3>
+
+                            <p>
+                                Responsive website created using
+                                native HTML and CSS.
+                            </p>
+
+                            <small>
+                                HTML • CSS • JavaScript
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="project">
+
+                        <div class="project-icon">
+                            🗄️
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Database System
+                            </h3>
+
+                            <p>
+                                Database project using SQL,
+                                tables, queries and database
+                                management.
+                            </p>
+
+                            <small>
+                                SQL • MariaDB • Database
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="status-bar">
+                3 objects
+            </div>
+
+        </div>
+
+
+        <!-- ================= SKILL WINDOW ================= -->
+
+        <div
+            class="window"
+            id="skillWindow">
+
+            <div class="title-bar">
+
+                <div class="title">
+                    💻 My Skills
+                </div>
+
+                <div class="window-buttons">
+
+                    <button onclick="minimizeWindow('skillWindow')">
+                        _
+                    </button>
+
+                    <button onclick="maximizeWindow('skillWindow')">
+                        □
+                    </button>
+
+                    <button onclick="closeWindow('skillWindow')">
+                        X
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="window-content">
+
+                <h2>
+                    Technical Skills
+                </h2>
+
+
+                <div class="skill-grid">
+
+                    <div class="skill">
+                        <span>HTML</span>
+                        <div class="progress">
+                            <div style="width:90%"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill">
+                        <span>CSS</span>
+                        <div class="progress">
+                            <div style="width:85%"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill">
+                        <span>JavaScript</span>
+                        <div class="progress">
+                            <div style="width:70%"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill">
+                        <span>IoT</span>
+                        <div class="progress">
+                            <div style="width:80%"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill">
+                        <span>Database</span>
+                        <div class="progress">
+                            <div style="width:75%"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill">
+                        <span>Networking</span>
+                        <div class="progress">
+                            <div style="width:70%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="status-bar">
+                6 skills
+            </div>
+
+        </div>
+
+
+        <!-- ================= CV WINDOW ================= -->
+
+        <div
+            class="window"
+            id="cvWindow">
+
+            <div class="title-bar">
+
+                <div class="title">
+                    📄 My CV
+                </div>
+
+                <div class="window-buttons">
+
+                    <button onclick="minimizeWindow('cvWindow')">
+                        _
+                    </button>
+
+                    <button onclick="maximizeWindow('cvWindow')">
+                        □
+                    </button>
+
+                    <button onclick="closeWindow('cvWindow')">
+                        X
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="window-content cv-preview">
+
+                <div class="cv-top">
+
+                    <div class="cv-photo">
+
+                        <img
+                            src="assets/profile.jpg"
+                            alt="Profile">
+
+                    </div>
+
+                    <div>
+
+                        <h1>
+                            Kaisar Hanif Pratama
+                        </h1>
+
+                        <p>
+                            Informatics Student
+                        </p>
+
+                        <p>
+                            Technology • Web • IoT
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <hr>
+
+
+                <h3>
+                    Profile
+                </h3>
+
+                <p>
+                    Informatics student interested in
+                    software development, web development,
+                    IoT, networking, and databases.
+                </p>
+
+
+                <h3>
+                    Education
+                </h3>
+
+                <p>
+                    Informatics — University / Institution Name
+                </p>
+
+
+                <h3>
+                    Experience
+                </h3>
+
+                <ul>
+
+                    <li>
+                        IoT Development Project
+                    </li>
+
+                    <li>
+                        Web Development Project
+                    </li>
+
+                    <li>
+                        Database Development Project
+                    </li>
+
+                </ul>
+
+
+                <a
+                    href="cv.html"
+                    class="xp-button">
+
+                    Open Full Creative CV →
+
+                </a>
+
+            </div>
+
+
+            <div class="status-bar">
+                My CV
+            </div>
+
+        </div>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <div
+            class="window"
+            id="contactWindow">
+
+            <div class="title-bar">
+
+                <div class="title">
+                    🌐 Internet Explorer
+                </div>
+
+                <div class="window-buttons">
+
+                    <button onclick="minimizeWindow('contactWindow')">
+                        _
+                    </button>
+
+                    <button onclick="maximizeWindow('contactWindow')">
+                        □
+                    </button>
+
+                    <button onclick="closeWindow('contactWindow')">
+                        X
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="browser-bar">
+
+                <span>
+                    Address
+                </span>
+
+                <input
+                    type="text"
+                    value="http://kaisarhanif.my.page"
+                    readonly>
+
+                <button>
+                    Go
+                </button>
+
+            </div>
+
+
+            <div class="browser-content">
+
+                <h1>
+                    Welcome to my website!
+                </h1>
+
+                <p>
+                    You can find me on the internet.
+                </p>
+
+
+                <div class="contact-links">
+
+                    <a href="#">
+                        📧 Email
+                    </a>
+
+                    <a href="#">
+                        💻 GitHub
+                    </a>
+
+                    <a href="#">
+                        📷 Instagram
+                    </a>
+
+                    <a href="#">
+                        💼 LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="status-bar">
+                Done
+            </div>
+
+        </div>
+
+
+        <!-- ================= RECYCLE ================= -->
+
+        <div
+            class="window"
+            id="recycleWindow">
+
+            <div class="title-bar">
+
+                <div class="title">
+                    🗑️ Recycle Bin
+                </div>
+
+                <div class="window-buttons">
+
+                    <button onclick="closeWindow('recycleWindow')">
+                        X
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="window-content recycle-content">
+
+                <div class="big-trash">
+                    🗑️
+                </div>
+
+                <h2>
+                    Recycle Bin
+                </h2>
+
+                <p>
+                    The Recycle Bin is empty.
+                </p>
+
+            </div>
+
+            <div class="status-bar">
+                0 objects
+            </div>
+
+        </div>
+
+
+        <!-- ================= START MENU ================= -->
+
+        <div
+            class="start-menu"
+            id="startMenu">
+
+            <div class="start-header">
+
+                <div class="start-avatar">
+                    👤
+                </div>
+
+                <strong>
+                    Kaisar Hanif
+                </strong>
+
+            </div>
+
+
+            <div class="start-body">
+
+                <button onclick="openWindow('computerWindow'); closeStartMenu();">
+                    🖥️ My Computer
+                </button>
+
+                <button onclick="openWindow('aboutWindow'); closeStartMenu();">
+                    📁 My Documents
+                </button>
+
+                <button onclick="openWindow('projectWindow'); closeStartMenu();">
+                    📂 My Projects
+                </button>
+
+                <button onclick="openWindow('skillWindow'); closeStartMenu();">
+                    💻 My Skills
+                </button>
+
+                <button onclick="openWindow('cvWindow'); closeStartMenu();">
+                    📄 My CV
+                </button>
+
+                <button onclick="openWindow('contactWindow'); closeStartMenu();">
+                    🌐 Internet
+                </button>
+
+            </div>
+
+
+            <div class="start-footer">
+
+                <span>
+                    🔌 Log Off
+                </span>
+
+                <span>
+                    ⏻ Turn Off
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= TASKBAR ================= -->
+
+        <footer class="taskbar">
+
+            <button
+                class="start-button"
+                onclick="toggleStartMenu()">
+
+                🪟
+                <strong>
+                    Start
+                </strong>
+
+            </button>
+
+
+            <div class="taskbar-apps">
+
+                <button
+                    id="task-computer"
+                    onclick="openWindow('computerWindow')">
+
+                    🖥️ My Computer
+
+                </button>
+
+                <button
+                    id="task-cv"
+                    onclick="openWindow('cvWindow')">
+
+                    📄 My CV
+
+                </button>
+
+            </div>
+
+
+            <div class="system-tray">
+
+                <span>
+                    🔊
+                </span>
+
+                <span>
+                    🌐
+                </span>
+
+                <span id="clock">
+                    12:00 PM
+                </span>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
 </html>
