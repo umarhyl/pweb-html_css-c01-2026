@@ -1,12 +1,9 @@
 :root {
-  --blue: #0050ee;
   --deep: #003399;
   --cream: #ece9d8;
   --soft: #d2ecff;
   --ink: #101827;
-  --pink: #ff9eb9;
-  --yellow: #ffcc00;
-  --bar: linear-gradient(#8caae6, #0066ff 14%, #0050ee 65%, #003399);
+  --bar: #0050ee;
 }
 * {
   box-sizing: border-box;
@@ -16,18 +13,18 @@ html {
   scroll-padding-top: 20px;
 }
 body {
-  margin: 0;
-  padding: 34px 24px 76px;
-  color: var(--ink);
-  font:
-    14px/1.65 Tahoma,
-    Verdana,
-    sans-serif;
-  background-color: #316ac5;
   background-image:
     linear-gradient(#ffffff18 1px, transparent 1px),
     linear-gradient(90deg, #ffffff18 1px, transparent 1px);
   background-size: 64px 64px;
+  margin: 0;
+  padding: 24px;
+  color: var(--ink);
+  font:
+  14px/1.65 Tahoma,
+  Verdana,
+  sans-serif;
+  background-color: #316ac5;
 }
 h1,
 h2,
@@ -69,9 +66,8 @@ summary {
   max-width: 1120px;
   margin: auto;
   background: #fffef7;
-  border: 3px solid var(--deep);
+  border: 1px solid #7f9db9;
   border-radius: 9px 9px 0 0;
-  box-shadow: 10px 12px 0 #00339970;
   overflow: hidden;
 }
 .titlebar {
@@ -85,24 +81,10 @@ summary {
   font-size: 13px;
   font-weight: bold;
   line-height: 1.5;
-  text-shadow: 1px 1px #003399;
-}
-.titlebar > span:last-child {
-  flex-shrink: 0;
 }
 .browser > .titlebar {
   font-size: 15px;
   padding: 5px 8px;
-}
-.window-controls {
-  letter-spacing: 3px;
-}
-.window-controls b {
-  display: inline-block;
-  background: #de5c2f;
-  border: 1px solid white;
-  border-radius: 3px;
-  padding: 0 3px;
 }
 .menu {
   display: flex;
@@ -122,126 +104,40 @@ summary {
   background: #316ac5;
   color: white;
 }
-.address {
-  background: var(--cream);
-  display: flex;
-  align-items: center;
-  padding: 7px 12px;
-  gap: 12px;
-  font-size: 12px;
-}
-.address div {
-  flex: 1;
-  background: white;
-  border: 1px solid #7f9db9;
-  padding: 3px 9px;
-  overflow-wrap: anywhere;
-}
-.address > a {
-  white-space: nowrap;
-  text-decoration: none;
-}
 .hero {
-  position: relative;
-  padding: 45px 58px 0;
-  background-color: var(--soft);
   background-image:
     linear-gradient(#fff9 1px, transparent 1px),
     linear-gradient(90deg, #fff9 1px, transparent 1px);
   background-size: 75px 75px;
+  padding: 45px 58px 0;
+  background-color: var(--soft);
   overflow: hidden;
   border-bottom: 2px solid var(--ink);
 }
 .eyebrow {
   font:
-    10px/1.5 "Courier New",
-    monospace;
+  10px/1.5 "Courier New",
+  monospace;
   letter-spacing: 2px;
   font-weight: bold;
 }
 .hero h1 {
-  position: relative;
-  z-index: 1;
   margin-top: 5px;
   font:
-    54px/1.15 Georgia,
-    serif;
-  letter-spacing: -3px;
-}
-.hero h1 span {
-  display: inline-block;
-  color: var(--pink);
-  font-size: clamp(80px, 12vw, 150px);
-  font-weight: bold;
-  -webkit-text-stroke: 2px var(--ink);
-  text-shadow:
-    5px 5px 0 white,
-    7px 7px 0 var(--ink);
-}
-.hero h1 i {
-  color: #008d00;
-  font-size: 112px;
-  -webkit-text-stroke: 2px var(--ink);
+  54px/1.15 Georgia,
+  serif;
+  color: var(--deep);
 }
 .hero-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 25px;
-  padding: 14px 55px 30px 5px;
+  padding: 14px 0 30px;
+  flex-wrap: wrap;
 }
 .hero-bottom p {
   font-size: 14px;
-}
-.sticker {
-  position: relative;
-  z-index: 1;
-  background: var(--yellow);
-  padding: 14px 28px;
-  border: 2px solid var(--ink);
-  box-shadow: 5px 5px 0 var(--ink);
-  text-decoration: none;
-  text-align: center;
-  font-weight: bold;
-  line-height: 1.3;
-  transform: rotate(7deg);
-}
-.sticker:hover {
-  transform: rotate(0);
-  background: #ff9933;
-}
-.spark {
-  position: absolute;
-  line-height: 1;
-  -webkit-text-stroke: 1px var(--ink);
-}
-.spark-one {
-  top: 30px;
-  right: 40px;
-  font-size: 88px;
-  color: var(--yellow);
-  transform: rotate(15deg);
-}
-.spark-two {
-  bottom: 54px;
-  left: 49%;
-  font-size: 65px;
-  color: #008d00;
-}
-.ticker {
-  margin-inline: -58px;
-  padding: 9px 16px;
-  background: var(--deep);
-  color: white;
-  text-align: center;
-  font:
-    bold 11px/1.6 "Courier New",
-    monospace;
-  letter-spacing: 1px;
-}
-.ticker span {
-  color: var(--yellow);
-  margin: 0 18px;
 }
 .scrapbook {
   padding: 32px;
@@ -252,43 +148,16 @@ summary {
   gap: 25px;
   align-items: start;
 }
-.tabs {
-  display: flex;
-  gap: 4px;
-  margin-bottom: 8px;
-}
-.tabs a {
-  flex: 1;
-  text-align: center;
-  text-decoration: none;
-  padding: 5px;
-  color: white;
-  background: var(--deep);
-  border: 3px ridge #8caae6;
-  font-size: 12px;
-  font-weight: bold;
-}
-.tabs a:hover,
-.tabs .selected {
-  background: #316ac5;
-}
 .window {
-  border: 2px solid var(--deep);
+  border: 1px solid #7f9db9;
   background: var(--cream);
   border-radius: 5px 5px 0 0;
-  box-shadow: 3px 3px 0 #7f9db966;
   overflow: hidden;
 }
-.mini-menu {
-  padding: 3px 10px;
-  font-size: 11px;
-  border-bottom: 1px solid #b7b4a5;
-}
 .portrait-canvas {
-  position: relative;
   margin: 10px;
-  border: 2px inset #7f9db9;
-  background: radial-gradient(ellipse at center, white 10%, #8caae6 90%);
+  border: 1px solid #7f9db9;
+  background: var(--soft);
   overflow: hidden;
 }
 .portrait-canvas img {
@@ -296,35 +165,6 @@ summary {
   height: 330px;
   object-fit: contain;
   object-position: bottom;
-}
-.photo-label {
-  position: absolute;
-  left: 16px;
-  bottom: 20px;
-  padding: 1px 14px;
-  background: #ffcc00;
-  border: 1px solid var(--ink);
-  transform: rotate(-9deg);
-  font:
-    italic bold 26px Georgia,
-    serif;
-  box-shadow: 3px 3px 0 var(--ink);
-}
-.hearts {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  font-size: 27px;
-  color: #de5c2f;
-  -webkit-text-stroke: 1px var(--ink);
-}
-.status {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 8px 7px;
-  padding: 2px 7px;
-  border: 1px inset #ddd;
-  font-size: 10px;
 }
 .mini-cards {
   display: grid;
@@ -340,45 +180,29 @@ summary {
   justify-content: space-between;
   gap: 9px;
   text-decoration: none;
-  box-shadow: 3px 3px 0 var(--ink);
 }
 .note strong {
   font:
-    21px/1.25 Georgia,
-    serif;
+  21px/1.25 Georgia,
+  serif;
 }
 .note > span:last-child:not(.eyebrow) {
   font-size: 11px;
 }
-.yellow {
-  background: #fff1a4;
-}
-.blue {
-  background: var(--soft);
-}
-.pink {
-  background: #ffcedd;
-}
-.mint {
-  background: #c4edc6;
-}
 a.note:hover {
-  background: #ffcedd;
+  background: var(--soft);
 }
 .paper {
   border: 1px solid var(--ink);
   background: #fffef7;
-  box-shadow: 4px 4px 0 #dfdfdf;
 }
 .about-note {
-  position: relative;
   padding: 27px;
-  border-top: 7px solid var(--pink);
 }
 h2 {
   font:
-    30px/1.16 Georgia,
-    serif;
+  30px/1.16 Georgia,
+  serif;
   letter-spacing: -0.7px;
 }
 h2 em {
@@ -398,18 +222,13 @@ h2 em {
   justify-content: center;
   padding: 8px 15px;
   border: 1px solid var(--ink);
-  background: linear-gradient(white, var(--cream));
-  box-shadow: 3px 3px 0 var(--ink);
+  background: var(--cream);
   text-decoration: none;
   font-size: 12px;
   font-weight: bold;
 }
 .button:hover {
-  background: #fff1a4;
-}
-.button:active {
-  box-shadow: none;
-  transform: translate(2px, 2px);
+  background: var(--soft);
 }
 .green {
   background: #267c08;
@@ -417,16 +236,6 @@ h2 em {
 }
 .green:hover {
   background: #008d00;
-}
-.note-star {
-  position: absolute;
-  right: 16px;
-  bottom: -32px;
-  font-size: 67px;
-  line-height: 1;
-  color: var(--yellow);
-  -webkit-text-stroke: 1px var(--ink);
-  transform: rotate(12deg);
 }
 .tools-section {
   margin-top: 45px;
@@ -441,18 +250,6 @@ h2 em {
 }
 .section-heading .eyebrow {
   margin-bottom: 8px;
-}
-.section-heading > span {
-  font-size: 30px;
-}
-.section-heading > .count {
-  font:
-    11px "Courier New",
-    monospace;
-  border: 1px solid var(--ink);
-  padding: 5px 10px;
-  white-space: nowrap;
-  background: #fff1a4;
 }
 .tools-grid {
   display: grid;
@@ -472,18 +269,6 @@ summary {
 }
 summary:hover {
   background: var(--soft);
-}
-.tool-icon {
-  display: inline-flex;
-  width: 27px;
-  height: 29px;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--ink);
-  margin-right: 6px;
-  font:
-    bold 11px "Courier New",
-    monospace;
 }
 details p {
   padding: 0 12px 12px;
@@ -508,14 +293,6 @@ details p {
   margin: 18px 0;
   font-size: 13px;
 }
-.big-flower {
-  display: block;
-  color: #008d00;
-  font-size: 65px;
-  line-height: 1;
-  -webkit-text-stroke: 1px var(--ink);
-  margin-bottom: 20px;
-}
 .service-list article {
   display: flex;
   gap: 17px;
@@ -527,8 +304,8 @@ details p {
 }
 .service-list article > span {
   font:
-    italic 28px Georgia,
-    serif;
+  italic 28px Georgia,
+  serif;
   color: var(--deep);
 }
 .service-list h3 {
@@ -546,13 +323,6 @@ details p {
 .project {
   display: block;
   text-decoration: none;
-  transition:
-    transform 160ms ease,
-    box-shadow 160ms ease;
-}
-.project:hover {
-  transform: translateY(-4px);
-  box-shadow: 5px 7px 0 #00339960;
 }
 .project img {
   width: 100%;
@@ -566,8 +336,8 @@ details p {
 }
 .project-caption p {
   font:
-    9px/1.5 "Courier New",
-    monospace;
+  9px/1.5 "Courier New",
+  monospace;
   letter-spacing: 1px;
   margin-bottom: 5px;
 }
@@ -575,25 +345,22 @@ details p {
   font-size: 16px;
 }
 .more-work {
+  background-image:
+    linear-gradient(#ffffffaa 1px, transparent 1px),
+    linear-gradient(90deg, #ffffffaa 1px, transparent 1px);
+  background-size: 40px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding: 25px 35px;
   gap: 15px;
-  background-color: #fff1a4;
-  background-image:
-    linear-gradient(#ffffffaa 1px, transparent 1px),
-    linear-gradient(90deg, #ffffffaa 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-.more-work > span {
-  font-size: 40px;
+  background-color: var(--cream);
 }
 .more-work h3 {
   font:
-    italic 32px/1.2 Georgia,
-    serif;
+  italic 32px/1.2 Georgia,
+  serif;
 }
 .more-work p {
   font-size: 13px;
@@ -631,74 +398,15 @@ details p {
   font-size: 10px;
   color: #44546a;
 }
-.taskbar {
-  display: flex;
-  align-items: stretch;
-  height: 39px;
-  position: fixed;
-  z-index: 20;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--bar);
-  color: white;
-  box-shadow: inset 0 2px 1px #8caae6;
-}
-.start {
-  padding: 0 25px 0 15px;
-  background: linear-gradient(#5edb5e, #31a431 15%, #008d00 65%, #267c08);
-  font:
-    italic bold 23px/39px Tahoma,
-    sans-serif;
-  color: white;
-  text-shadow: 1px 2px #267c08;
-  text-decoration: none;
-  border-radius: 0 15px 15px 0;
-}
-.task {
-  margin: 5px 0 5px 8px;
-  padding: 3px 14px;
-  border: 1px solid #8caae6;
-  border-radius: 3px;
-  font-size: 12px;
-  text-decoration: none;
-  background: #316ac5;
-}
-.task.active {
-  background: var(--deep);
-  box-shadow: inset 1px 1px #002266;
-}
-.task:hover {
-  background: #0066ff;
-}
-.tray {
-  margin-left: auto;
-  padding: 9px 20px;
-  background: #0c80d4;
-  font-size: 11px;
-}
 @media (max-width: 850px) {
   body {
-    padding: 18px 14px 65px;
+    padding: 18px 14px;
   }
   .hero {
     padding: 35px 32px 0;
   }
   .hero h1 {
     font-size: 42px;
-  }
-  .hero h1 span {
-    font-size: 105px;
-  }
-  .hero h1 i {
-    font-size: 82px;
-  }
-  .ticker {
-    margin-inline: -32px;
-  }
-  .spark-one {
-    font-size: 60px;
-    right: 20px;
   }
   .scrapbook {
     padding: 24px;
@@ -727,11 +435,8 @@ details p {
 }
 @media (max-width: 620px) {
   body {
-    padding: 9px 8px 58px;
+    padding: 9px 8px;
     font-size: 13px;
-  }
-  .desktop {
-    box-shadow: 4px 4px 0 #00339970;
   }
   .browser > .titlebar {
     font-size: 11px;
@@ -742,14 +447,6 @@ details p {
   .menu a {
     padding: 5px 9px;
     font-size: 12px;
-  }
-  .address {
-    gap: 7px;
-    padding: 6px;
-    font-size: 10px;
-  }
-  .address > span {
-    display: none;
   }
   .hero {
     padding: 29px 20px 0;
@@ -763,41 +460,12 @@ details p {
     letter-spacing: -2px;
     margin-top: 15px;
   }
-  .hero h1 span {
-    font-size: clamp(60px, 17vw, 100px);
-    -webkit-text-stroke: 1px var(--ink);
-    text-shadow:
-      3px 3px white,
-      4px 4px var(--ink);
-  }
-  .hero h1 i {
-    font-size: 60px;
-  }
   .hero-bottom {
     padding: 22px 3px 28px;
     gap: 12px;
   }
   .hero-bottom p {
     font-size: 11px;
-  }
-  .sticker {
-    font-size: 11px;
-    padding: 11px 17px;
-  }
-  .spark-one {
-    font-size: 39px;
-    top: 17px;
-    right: 14px;
-  }
-  .spark-two {
-    display: none;
-  }
-  .ticker {
-    margin-inline: -20px;
-    font-size: 8px;
-  }
-  .ticker span {
-    margin-inline: 5px;
   }
   .scrapbook {
     padding: 18px 14px;
@@ -819,19 +487,8 @@ details p {
   .about-note h2 {
     font-size: 38px;
   }
-  .note-star {
-    bottom: -20px;
-    font-size: 50px;
-  }
   .section-heading h2 {
     font-size: 28px;
-  }
-  .section-heading > .count {
-    font-size: 9px;
-    padding: 4px;
-  }
-  .section-heading > span:not(.count) {
-    display: none;
   }
   .services-section {
     margin-block: 28px;
@@ -854,25 +511,10 @@ details p {
   .social-links .button {
     flex: 1;
   }
-  .tray {
-    display: none;
-  }
-  .task {
-    padding-inline: 8px;
-    font-size: 10px;
-    margin-left: 5px;
-  }
-  .start {
-    padding-inline: 12px 20px;
-    font-size: 21px;
-  }
 }
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-  .project {
-    transition: none;
   }
 }
 @media print {
@@ -880,22 +522,18 @@ details p {
     background: white;
     padding: 0;
   }
-  .taskbar,
   .browser,
   .skip-link {
     display: none;
   }
   .desktop {
     border: 0;
-    box-shadow: none;
   }
   .window {
-    box-shadow: none;
     break-inside: avoid;
   }
   .titlebar {
     background: #ece9d8;
     color: black;
-    text-shadow: none;
   }
 }
