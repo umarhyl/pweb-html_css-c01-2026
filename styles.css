@@ -18,7 +18,7 @@ body {
     linear-gradient(90deg, #ffffff18 1px, transparent 1px);
   background-size: 64px 64px;
   margin: 0;
-  padding: 24px;
+  padding: 24px 24px 76px;
   color: var(--ink);
   font:
   14px/1.65 Tahoma,
@@ -398,9 +398,56 @@ details p {
   font-size: 10px;
   color: #44546a;
 }
+/* Nama file proyek dan taskbar Windows XP. */
+.project .titlebar,
+.taskbar {
+  background: linear-gradient(#8caae6, #0066ff 14%, #0050ee 65%, #003399);
+}
+.project .titlebar span:first-child {
+  overflow-wrap: anywhere;
+}
+.taskbar {
+  display: flex;
+  height: 39px;
+  position: fixed;
+  z-index: 20;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+}
+.start {
+  padding: 0 25px 0 15px;
+  background: linear-gradient(#5edb5e, #31a431 15%, #008d00 65%, #267c08);
+  font: italic bold 23px/39px Tahoma, sans-serif;
+  text-decoration: none;
+  border-radius: 0 15px 15px 0;
+}
+.task {
+  margin: 5px 0 5px 8px;
+  padding: 3px 14px;
+  border: 1px solid #8caae6;
+  border-radius: 3px;
+  font-size: 12px;
+  text-decoration: none;
+  background: #316ac5;
+}
+.task.active {
+  background: var(--deep);
+}
+.task:hover {
+  background: #0066ff;
+}
+.tray {
+  margin-left: auto;
+  padding: 9px 20px;
+  background: #0c80d4;
+  font-size: 11px;
+}
+
 @media (max-width: 850px) {
   body {
-    padding: 18px 14px;
+    padding: 18px 14px 65px;
   }
   .hero {
     padding: 35px 32px 0;
@@ -434,8 +481,20 @@ details p {
   }
 }
 @media (max-width: 620px) {
+  .tray {
+    display: none;
+  }
+  .task {
+    padding-inline: 8px;
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  .start {
+    padding-inline: 12px 20px;
+    font-size: 21px;
+  }
   body {
-    padding: 9px 8px;
+    padding: 9px 8px 58px;
     font-size: 13px;
   }
   .browser > .titlebar {
@@ -522,6 +581,7 @@ details p {
     background: white;
     padding: 0;
   }
+  .taskbar,
   .browser,
   .skip-link {
     display: none;
