@@ -723,12 +723,6 @@ h2 em {
   padding: 25px;
 }
 
-.cv-body h1,
-.cv-body h2,
-.cv-body .section-title {
-  font-family: Georgia, serif;
-}
-
 .cv-header {
   display: flex;
   align-items: center;
@@ -827,7 +821,7 @@ h2 em {
   padding: 2px 9px;
   border: 1px solid #7f9db9;
   background-color: #ece9d8;
-  font: 11px/1.5 "Courier New", monospace;
+  font: 11px/1.5 var(--font-mono);
 }
 
 .skill-list {
