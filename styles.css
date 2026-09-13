@@ -95,7 +95,23 @@ button {
   font-weight: bold;
   line-height: 1.5;
 }
-
+.browser {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+.browser > .titlebar {
+  font-size: 15px;
+  padding: 5px 8px;
+}
+.landing-page {
+  padding-top: 76px;
+}
+.landing-page .browser {
+  top: 52px;
+}
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -159,7 +175,7 @@ button {
 .window {
   border: 1px solid #7f9db9;
   background: var(--cream);
-  border-radius: 5px 5px 0 0;
+  border-radius: 4px;
   overflow: hidden;
 }
 .portrait-canvas {
@@ -320,7 +336,7 @@ h2 em {
 .project img {
   width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: contain;
+  object-fit: cover;
   background: #e4eaff;
   border-bottom: 1px solid #7f9db9;
 }
@@ -442,6 +458,13 @@ h2 em {
   background: linear-gradient(#4985df, #316ac5);
   box-shadow: inset 0 1px #ffffff40;
 }
+.task img {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
 .task.active {
   background: #003399;
   font-weight: bold;
@@ -450,6 +473,11 @@ h2 em {
 }
 .task:hover {
   background: #0066ff;
+}
+.task:active {
+  background: #003399;
+  border-color: #002775;
+  box-shadow: inset 1px 2px 3px #002775;
 }
 .taskbar a:focus-visible {
   outline-offset: -3px;
@@ -510,6 +538,8 @@ h2 em {
     padding-inline: 8px;
     font-size: 10px;
     margin-left: 5px;
+    flex: 1;
+    text-align: center;
   }
   .start {
     padding-inline: 10px 16px;
@@ -621,44 +651,9 @@ h2 em {
   }
 }
 
-.cv-body {
-  padding: 70px 20px 100px;
-}
-
-.cv-taskbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 18px;
-  background-color: var(--bar);
-  color: white;
-}
-
-.cv-startbtn {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.cv-startbtn img {
-  width: 22px;
-  height: 22px;
-  margin-right: 8px;
-}
-
-.cv-navbtn {
-  padding: 6px 16px;
-  color: var(--ink);
-}
-
-.cv-navbtn:active {
-  background-color: #b7d9f2;
+.sectioncv {
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .win-controls button {
@@ -671,12 +666,87 @@ h2 em {
 }
 
 .btn-close:hover {
-  background-color: #e81123;
+  background-color: #de5c2f;
   color: white;
 }
 
 .btn-min:hover, .btn-max:hover {
   background-color: #d2ecff;
+}
+
+.cv-menu-bar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  position: relative;
+  padding: 4px 12px;
+  background-color: #ece9d8;
+  border-bottom: 1px solid #b5b3a5;
+  font-size: 13px;
+}
+
+.cv-menu-bar a {
+  display: block;
+  padding: 4px 13px;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cv-menu-bar a:hover,
+.cv-menu-bar a:focus-visible,
+.cv-menu-bar a[aria-current] {
+  background-color: #316ac5;
+  color: white;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.cv-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  display: none;
+  min-width: 150px;
+  padding: 3px;
+  background: var(--cream);
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+}
+
+.menu-item:hover .cv-dropdown,
+.menu-item:focus-within .cv-dropdown {
+  display: block;
+}
+
+.cv-dropdown a {
+  padding: 6px 10px;
+}
+
+.cv-menu-bar span {
+  padding: 4px 12px;
+}
+
+.cv-menu-bar span:hover {
+  background-color: #316ac5;
+  color: white;
+}
+
+h1 mark {
+  background-color: #ffcc00;
+  color: #003399;
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+.cv-window-content {
+  padding: 25px;
+  background: #fffef7;
 }
 
 .cv-header {
@@ -685,7 +755,7 @@ h2 em {
   gap: 20px;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  border-bottom: 2px solid #101827;
+  border-bottom: 3px solid #101827;
 }
 
 .profile-pic img {
@@ -697,6 +767,7 @@ h2 em {
 }
 
 .profile-info h1 {
+  margin: 0;
   color: var(--deep);
   font: 30px/1.2 var(--font-display);
 }
@@ -741,13 +812,14 @@ h2 em {
 }
 
 .summary-text {
+  margin: 0;
   font-size: 13px;
 }
 
 .item-entry {
   padding: 0 0 14px 12px;
   margin-bottom: 6px;
-  border-left: 2px solid #7f9db9;
+  border-left: 2px solid #808080;
 }
 
 .item-entry h4 {
@@ -773,7 +845,7 @@ h2 em {
 .date {
   display: inline-block;
   padding: 2px 9px;
-  border: 1px solid #7f9db9;
+  border: 1px solid #808080;
   background-color: #ece9d8;
   font: 11px/1.5 var(--font-mono);
 }
@@ -787,7 +859,7 @@ h2 em {
 .skill-list li {
   padding: 8px 10px;
   margin-bottom: 6px;
-  border: 1px solid #7f9db9;
+  border: 1px solid #808080;
   background-color: white;
   font-size: 12px;
 }
@@ -815,9 +887,6 @@ h2 em {
 }
 
 @media (max-width: 620px) {
-  .cv-body {
-    padding: 60px 10px 80px;
-  }
   .cv-header {
     flex-direction: column;
     text-align: center;
