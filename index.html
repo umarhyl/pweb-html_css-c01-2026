@@ -1,332 +1,265 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portofolio Keisya Halimah Mulia: UI/UX, frontend development, dan creative design."
-    />
-    <title>Keisya's | Portfolio</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Lewati navigasi</a>
-    <div class="desktop">
-      <header class="browser">
-        <div class="titlebar">
-          <span>Keisya's | Portfolio</span
-          >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portofolio Keisya Halimah Mulia: UI/UX, frontend development, dan creative design." />
+  <title>Keisya's | Portfolio</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Lewati navigasi</a>
+  <div class="desktop">
+    <header class="browser">
+      <div class="titlebar">
+        <div>Keisya's World</div>
+        <div class="win-controls">
+          <button class="btn-min">_</button>
+          <button class="btn-max">□</button>
+          <button class="btn-close">X</button>
         </div>
-        <nav class="menu" aria-label="Navigasi utama">
-          <a href="./index.html" aria-current="page">Home</a
-          ><a href="#about">About</a><a href="#tools">Tools</a
-          ><a href="#services">Services</a><a href="#projects">Projects</a
-          ><a href="#contact">Contact</a><a href="./cv.html">My CV</a>
-        </nav>
-      </header>
-      <main id="main">
-        <section class="hero" id="home">
-          <p class="eyebrow">WELCOME TO MY LITTLE CORNER OF THE INTERNET</p>
-          <h1>Hi, I'm Keisya!</h1>
-          <div class="hero-bottom">
+      </div>
+      <nav class="menu" aria-label="Navigasi utama">
+        <a href="./index.html" aria-current="page">Home</a><a href="#about">About</a><a href="#tools">Tools</a><a
+          href="#services">Services</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a
+          href="./cv.html">My CV</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero" id="home">
+        <p class="eyebrow">WELCOME TO MY LITTLE CORNER OF THE INTERNET</p>
+        <h1>Hi, I'm Keisya!</h1>
+        <div class="hero-bottom">
+          <p>
+            IT student. Creative thinker.<br />Turning ideas into pixels &amp;
+            possibilities.
+          </p>
+          <a class="button green" href="./cv.html">Lihat Creative CV</a>
+        </div>
+      </section>
+      <div class="scrapbook">
+        <section class="intro-grid" id="about" aria-label="Tentang Keisya">
+          <div class="portrait-stack">
+            <div class="window portrait-window">
+              <div class="portrait-canvas">
+                <img src="./assets/profile.png" alt="Keisya Halimah Mulia" />
+              </div>
+            </div>
+            <div class="mini-cards">
+              <div class="note">
+                <span class="eyebrow">CURRENTLY INTO</span><strong>Design, code<br />&amp; JKT48 </strong>
+              </div>
+              <a class="note" href="#projects"><span class="eyebrow">MY FAVORITE FOLDER</span><strong>Selected
+                  works</strong><span>Click to explore &#8599;</span></a>
+            </div>
+          </div>
+          <article class="about-note paper">
+            <p class="eyebrow">ABOUT_ME.TXT</p>
+            <h2>A little bit<br />of <em>my world.</em></h2>
             <p>
-              IT student. Creative thinker.<br />Turning ideas into pixels &amp;
-              possibilities.
+              Halo! Kenalin, aku Keisya. Mahasiswa Teknologi Informasi yang
+              nemu “dunia baru” di web design dan UI/UX. Dari bikin poster
+              organisasi sejak SMP–SMA, sekarang naik level bikin website.
             </p>
-            <a class="button green" href="./cv.html">Lihat Creative CV</a>
+            <p>
+              Aku suka ngulik auto-layout di Figma, meracik interaksi di
+              Framer, dan menggabungkan logika coding dengan visual yang
+              cakep. Buatku, desain harus punya fondasi rapi dan nyaman
+              dipakai.
+            </p>
+            <p>
+              Di luar wireframing dan kejar deadline, JKT48 jadi moodbooster
+              saat mentok cari inspirasi atau debugging tengah malam.
+            </p>
+            <a class="button green" href="./cv.html">Read my creative CV &#8594;</a>
+          </article>
+        </section>
+        <section class="tools-section" id="tools">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">THE CREATIVE TOOLBOX</p>
+              <h2>My everyday essentials.</h2>
+            </div>
+          </div>
+          <div class="tools-grid">
+            <p class="tool">Figma</p>
+            <p class="tool">Framer</p>
+            <p class="tool">GitHub</p>
+            <p class="tool">Vercel</p>
+            <p class="tool">Canva</p>
+            <p class="tool">AI Prompts</p>
+            <p class="tool">CSS &amp; Tailwind</p>
+            <p class="tool">VS Code &amp; React</p>
           </div>
         </section>
-        <div class="scrapbook">
-          <section class="intro-grid" id="about" aria-label="Tentang Keisya">
-            <div class="portrait-stack">
-              <div class="window portrait-window">
-                <div class="portrait-canvas">
-                  <img
-                    src="./assets/profile.png"
-                    alt="Keisya Halimah Mulia"
-                  />
-                </div>
-              </div>
-              <div class="mini-cards">
-                <div class="note">
-                  <span class="eyebrow">CURRENTLY INTO</span
-                  ><strong>Design, code<br />&amp; JKT48 </strong>
-                </div>
-                <a class="note" href="#projects"
-                  ><span class="eyebrow">MY FAVORITE FOLDER</span
-                  ><strong>Selected works</strong
-                  ><span>Click to explore &#8599;</span></a
-                >
-              </div>
-            </div>
-            <article class="about-note paper">
-              <p class="eyebrow">ABOUT_ME.TXT</p>
-              <h2>A little bit<br />of <em>my world.</em></h2>
-              <p>
-                Halo! Kenalin, aku Keisya. Mahasiswa Teknologi Informasi yang
-                nemu “dunia baru” di web design dan UI/UX. Dari bikin poster
-                organisasi sejak SMP–SMA, sekarang naik level bikin website.
-              </p>
-              <p>
-                Aku suka ngulik auto-layout di Figma, meracik interaksi di
-                Framer, dan menggabungkan logika coding dengan visual yang
-                cakep. Buatku, desain harus punya fondasi rapi dan nyaman
-                dipakai.
-              </p>
-              <p>
-                Di luar wireframing dan kejar deadline, JKT48 jadi moodbooster
-                saat mentok cari inspirasi atau debugging tengah malam.
-              </p>
-              <a class="button green" href="./cv.html"
-                >Read my creative CV &#8594;</a
-              >
-            </article>
-          </section>
-          <section class="tools-section" id="tools">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow">THE CREATIVE TOOLBOX</p>
-                <h2>My everyday essentials.</h2>
-              </div>
-            </div>
-            <div class="tools-grid">
-              <p class="tool">Figma</p>
-              <p class="tool">Framer</p>
-              <p class="tool">GitHub</p>
-              <p class="tool">Vercel</p>
-              <p class="tool">Canva</p>
-              <p class="tool">AI Prompts</p>
-              <p class="tool">CSS &amp; Tailwind</p>
-              <p class="tool">VS Code &amp; React</p>
-            </div>
-          </section>
-          <section class="services-section" id="services">
-            <div class="window service-intro">
-              <div class="titlebar">
-                <span>What I do</span>
-              </div>
-              <div class="panel-body">
-                <h2>A little logic.<br />A lot of <em>creativity.</em></h2>
-                <p>
-                  Dari ide pertama sampai detail terakhir, aku membantu
-                  merancang pengalaman digital yang enak dilihat dan digunakan.
-                </p>
-                <a class="button green" href="#contact"
-                  >Let's work together &#8599;</a
-                >
-              </div>
-            </div>
-            <div class="service-list">
-              <article>
-                <span>01</span>
-                <div>
-                  <h3>UI/UX &amp; Responsive Design</h3>
-                  <p>
-                    Wireframe dan prototipe Figma yang intuitif, konsisten, dan
-                    mudah dinavigasi di berbagai layar.
-                  </p>
-                </div>
-              </article>
-              <article>
-                <span>02</span>
-                <div>
-                  <h3>Frontend Web Development</h3>
-                  <p>
-                    Menerjemahkan mock-up menjadi antarmuka interaktif
-                    menggunakan HTML, CSS, dan JavaScript.
-                  </p>
-                </div>
-              </article>
-              <article>
-                <span>03</span>
-                <div>
-                  <h3>Database &amp; System Logic</h3>
-                  <p>
-                    Perancangan ERD, alur data, dan normalisasi dengan dasar
-                    SQL.
-                  </p>
-                </div>
-              </article>
-              <article>
-                <span>04</span>
-                <div>
-                  <h3>Creative Visual &amp; Branding</h3>
-                  <p>
-                    Banner, publikasi, dan aset visual yang selaras dengan
-                    identitas brand serta GSM.
-                  </p>
-                </div>
-              </article>
-              <article>
-                <span>05</span>
-                <div>
-                  <h3>QA &amp; Usability Testing</h3>
-                  <p>
-                    Mengecek bug, fungsi tombol, dan alur navigasi agar
-                    pengalaman pengguna berjalan lancar.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </section>
-          <section id="projects">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow">A FEW THINGS I'VE MADE</p>
-                <h2>Inside my projects folder.</h2>
-              </div>
-            </div>
-            <div class="project-grid">
-              <a
-                class="project window"
-                href="https://keisyaahm.framer.website/project5gerex"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div class="titlebar"><span>01 &mdash; gerigi_2026.png</span><span aria-hidden="true">&#8599;</span></div>
-                <img
-                  src="./assets/gerigi.png"
-                  alt="Desain website Gerigi X UKM Expo 2026"
-                  loading="lazy"
-                />
-                <div class="project-caption">
-                  <p>WEB DESIGN · UI/UX</p>
-                  <h3>Gerigi X UKM Expo 2026</h3>
-                </div>
-              </a>
-              <a
-                class="project window"
-                href="https://keisyaahm.framer.website/project1evastra"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div class="titlebar"><span>02 &mdash; evastra.png</span><span aria-hidden="true">&#8599;</span></div>
-                <img
-                  src="./assets/evastra.png"
-                  alt="Proyek Evastra, web angkatan Teknologi Informasi ITS 2025"
-                  loading="lazy"
-                />
-                <div class="project-caption">
-                  <p>FRONTEND DEVELOPMENT · UI/UX</p>
-                  <h3>Evastra — Web Angkatan TI ITS 2025</h3>
-                </div>
-              </a>
-              <a
-                class="project window"
-                href="https://keisyaahm.framer.website/project2ara"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div class="titlebar"><span>03 &mdash; ara_7.0.png</span><span aria-hidden="true">&#8599;</span></div>
-                <img
-                  src="./assets/ara.png"
-                  alt="Desain website A Renewal Agent 7.0"
-                  loading="lazy"
-                />
-                <div class="project-caption">
-                  <p>WEB DESIGN</p>
-                  <h3>A Renewal Agent (ARA) 7.0</h3>
-                </div>
-              </a>
-              <a
-                class="project window"
-                href="https://keisyaahm.framer.website/project3porto"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div class="titlebar"><span>04 &mdash; personal_portfolio.png</span><span aria-hidden="true">&#8599;</span></div>
-                <img
-                  src="./assets/portfolio.png"
-                  alt="Website portofolio Keisya Halimah Mulia"
-                  loading="lazy"
-                />
-                <div class="project-caption">
-                  <p>WEB DESIGN</p>
-                  <h3>Keisya Halimah Mulia — Portfolio</h3>
-                </div>
-              </a>
-              <a
-                class="project window"
-                href="https://keisyaahm.framer.website/project4solits"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div class="titlebar"><span>05 &mdash; solits.png</span><span aria-hidden="true">&#8599;</span></div>
-                <img
-                  src="./assets/solits.png"
-                  alt="Karya creative dan graphic design Ini Lho ITS! X FORDA SOLITS"
-                  loading="lazy"
-                />
-                <div class="project-caption">
-                  <p>CREATIVE · GRAPHIC DESIGN</p>
-                  <h3>Ini Lho ITS! X FORDA SOLITS</h3>
-                </div>
-              </a>
-              <div class="more-work paper">
-                <h3>There's more<br />in the folder!</h3>
-                <p>Kumpulan eksplorasi visual dan karya kreatif lainnya.</p>
-                <a
-                  class="button green"
-                  href="https://canva.link/smrp224t33h97mp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Open another portfolio &#8599;</a
-                >
-              </div>
-            </div>
-          </section>
-          <section class="contact window" id="contact">
+        <section class="services-section" id="services">
+          <div class="window service-intro">
             <div class="titlebar">
-              <span>New message — let's create something</span
-              >
+              <span>What I do</span>
             </div>
-            <div class="contact-body">
+            <div class="panel-body">
+              <h2>A little logic.<br />A lot of <em>creativity.</em></h2>
+              <p>
+                Dari ide pertama sampai detail terakhir, aku membantu
+                merancang pengalaman digital yang enak dilihat dan digunakan.
+              </p>
+              <a class="button green" href="#contact">Let's work together &#8599;</a>
+            </div>
+          </div>
+          <div class="service-list">
+            <article>
+              <span>01</span>
               <div>
-                <p class="eyebrow">GOT AN IDEA?</p>
-                <h2>Let's make it <em>happen.</em></h2>
-                <a class="email" href="mailto:itssmekeisya@gmail.com"
-                  >itssmekeisya@gmail.com &#8599;</a
-                >
+                <h3>UI/UX &amp; Responsive Design</h3>
+                <p>
+                  Wireframe dan prototipe Figma yang intuitif, konsisten, dan
+                  mudah dinavigasi di berbagai layar.
+                </p>
               </div>
-              <nav class="social-links" aria-label="Media sosial">
-                <a
-                  class="button"
-                  href="https://github.com/keisyaahm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub &#8599;</a
-                ><a
-                  class="button"
-                  href="https://www.instagram.com/keisyaahm/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Instagram &#8599;</a
-                ><a
-                  class="button"
-                  href="https://www.linkedin.com/in/keisyahalimahmulia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >LinkedIn &#8599;</a
-                >
-              </nav>
+            </article>
+            <article>
+              <span>02</span>
+              <div>
+                <h3>Frontend Web Development</h3>
+                <p>
+                  Menerjemahkan mock-up menjadi antarmuka interaktif
+                  menggunakan HTML, CSS, dan JavaScript.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>03</span>
+              <div>
+                <h3>Database &amp; System Logic</h3>
+                <p>
+                  Perancangan ERD, alur data, dan normalisasi dengan dasar
+                  SQL.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>04</span>
+              <div>
+                <h3>Creative Visual &amp; Branding</h3>
+                <p>
+                  Banner, publikasi, dan aset visual yang selaras dengan
+                  identitas brand serta GSM.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>05</span>
+              <div>
+                <h3>QA &amp; Usability Testing</h3>
+                <p>
+                  Mengecek bug, fungsi tombol, dan alur navigasi agar
+                  pengalaman pengguna berjalan lancar.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section id="projects">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">A FEW THINGS I'VE MADE</p>
+              <h2>Inside my projects folder.</h2>
             </div>
-          </section>
-          <footer class="page-footer">
-            <a href="https://keisyaahm.framer.website/"
-              >Original portfolio &#8599;</a>
-          </footer>
-        </div>
-      </main>
-    </div>
-    <footer class="taskbar">
-      <a class="start" href="./index.html">
-        <img src="./assets/windows-xp.png" width="23" alt="" />
-        start
-      </a>
-      <a class="task active" href="./index.html" aria-current="page">&#128193; Keisya's World</a>
-      <a class="task" href="./cv.html">&#128196; My CV</a>
-      <span class="tray">Praktikum Pemrograman Website &middot; 2026</span>
-    </footer>
-  </body>
+          </div>
+          <div class="project-grid">
+            <a class="project window" href="https://keisyaahm.framer.website/project5gerex" target="_blank"
+              rel="noopener noreferrer">
+              <div class="titlebar"><span>01 &mdash; gerigi_2026.png</span><span aria-hidden="true">&#8599;</span></div>
+              <img src="./assets/gerigi.png" alt="Desain website Gerigi X UKM Expo 2026" loading="lazy" />
+              <div class="project-caption">
+                <p>WEB DESIGN · UI/UX</p>
+                <h3>Gerigi X UKM Expo 2026</h3>
+              </div>
+            </a>
+            <a class="project window" href="https://keisyaahm.framer.website/project1evastra" target="_blank"
+              rel="noopener noreferrer">
+              <div class="titlebar"><span>02 &mdash; evastra.png</span><span aria-hidden="true">&#8599;</span></div>
+              <img src="./assets/evastra.png" alt="Proyek Evastra, web angkatan Teknologi Informasi ITS 2025"
+                loading="lazy" />
+              <div class="project-caption">
+                <p>FRONTEND DEVELOPMENT · UI/UX</p>
+                <h3>Evastra — Web Angkatan TI ITS 2025</h3>
+              </div>
+            </a>
+            <a class="project window" href="https://keisyaahm.framer.website/project2ara" target="_blank"
+              rel="noopener noreferrer">
+              <div class="titlebar"><span>03 &mdash; ara_7.0.png</span><span aria-hidden="true">&#8599;</span></div>
+              <img src="./assets/ara.png" alt="Desain website A Renewal Agent 7.0" loading="lazy" />
+              <div class="project-caption">
+                <p>WEB DESIGN</p>
+                <h3>A Renewal Agent (ARA) 7.0</h3>
+              </div>
+            </a>
+            <a class="project window" href="https://keisyaahm.framer.website/project3porto" target="_blank"
+              rel="noopener noreferrer">
+              <div class="titlebar"><span>04 &mdash; personal_portfolio.png</span><span
+                  aria-hidden="true">&#8599;</span></div>
+              <img src="./assets/portfolio.png" alt="Website portofolio Keisya Halimah Mulia" loading="lazy" />
+              <div class="project-caption">
+                <p>WEB DESIGN</p>
+                <h3>Keisya Halimah Mulia — Portfolio</h3>
+              </div>
+            </a>
+            <a class="project window" href="https://keisyaahm.framer.website/project4solits" target="_blank"
+              rel="noopener noreferrer">
+              <div class="titlebar"><span>05 &mdash; solits.png</span><span aria-hidden="true">&#8599;</span></div>
+              <img src="./assets/solits.png" alt="Karya creative dan graphic design Ini Lho ITS! X FORDA SOLITS"
+                loading="lazy" />
+              <div class="project-caption">
+                <p>CREATIVE · GRAPHIC DESIGN</p>
+                <h3>Ini Lho ITS! X FORDA SOLITS</h3>
+              </div>
+            </a>
+            <div class="more-work paper">
+              <h3>There's more<br />in the folder!</h3>
+              <p>Kumpulan eksplorasi visual dan karya kreatif lainnya.</p>
+              <a class="button green" href="https://canva.link/smrp224t33h97mp" target="_blank"
+                rel="noopener noreferrer">Open another portfolio &#8599;</a>
+            </div>
+          </div>
+        </section>
+        <section class="contact window" id="contact">
+          <div class="titlebar">
+            <span>New message — let's create something</span>
+          </div>
+          <div class="contact-body">
+            <div>
+              <p class="eyebrow">GOT AN IDEA?</p>
+              <h2>Let's make it <em>happen.</em></h2>
+              <a class="email" href="mailto:itssmekeisya@gmail.com">itssmekeisya@gmail.com &#8599;</a>
+            </div>
+            <nav class="social-links" aria-label="Media sosial">
+              <a class="button" href="https://github.com/keisyaahm" target="_blank" rel="noopener noreferrer">GitHub
+                &#8599;</a><a class="button" href="https://www.instagram.com/keisyaahm/" target="_blank"
+                rel="noopener noreferrer">Instagram &#8599;</a><a class="button"
+                href="https://www.linkedin.com/in/keisyahalimahmulia" target="_blank" rel="noopener noreferrer">LinkedIn
+                &#8599;</a>
+            </nav>
+          </div>
+        </section>
+        <footer class="page-footer">
+          <a href="https://keisyaahm.framer.website/">Original portfolio &#8599;</a>
+        </footer>
+      </div>
+    </main>
+  </div>
+  <footer class="taskbar">
+    <a class="start" href="./index.html">
+      <img src="./assets/windows-xp.png" width="23" alt="" />
+      start
+    </a>
+    <a class="task active" href="./index.html" aria-current="page">&#128193; Keisya's World</a>
+    <a class="task" href="./cv.html">&#128196; My CV</a>
+    <span class="tray">Praktikum Pemrograman Website &middot; 2026</span>
+  </footer>
+</body>
+
 </html>
