@@ -16,16 +16,30 @@ html {
   scroll-padding-top: 20px;
 }
 body {
-  background-image:
-    linear-gradient(#ffffff18 1px, transparent 1px),
-    linear-gradient(90deg, #ffffff18 1px, transparent 1px);
-  background-size: 64px 64px;
   margin: 0;
   padding: 24px 24px 76px;
   color: var(--ink);
-  font: 14px/1.65 var(--font-body);
-  background-color: #316ac5;
+  font: 14px/1.65 Tahoma, Verdana, sans-serif;
 }
+
+body::before {
+  content: "";
+  position: fixed; /* Bikin background stag/diam */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: blur(5px); 
+  
+  z-index: -1; 
+}
+
 h1,
 h2,
 h3,
