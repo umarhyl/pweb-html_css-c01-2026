@@ -19,7 +19,7 @@ body {
   margin: 0;
   padding: 24px 24px 76px;
   color: var(--ink);
-  font: 14px/1.65 Tahoma, Verdana, sans-serif;
+  font: 14px/1.65 var(--font-body);
 }
 
 body::before {
@@ -106,12 +106,6 @@ button {
   font-size: 15px;
   padding: 5px 8px;
 }
-.landing-page {
-  padding-top: 76px;
-}
-.landing-page .browser {
-  top: 52px;
-}
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -121,11 +115,13 @@ button {
   border-bottom: 1px solid #b5b3a5;
 }
 .menu a {
+  display: block;
   text-decoration: none;
   padding: 4px 13px;
   font-size: 13px;
 }
 .menu a:hover,
+.menu a:focus-visible,
 .menu a[aria-current] {
   background: #316ac5;
   color: white;
@@ -142,8 +138,7 @@ button {
 }
 .eyebrow {
   font:
-  10px/1.5 "Courier New",
-  monospace;
+  10px/1.5 var(--font-mono);
   letter-spacing: 2px;
   font-weight: bold;
 }
@@ -207,8 +202,7 @@ button {
 }
 .note strong {
   font:
-  21px/1.25 Georgia,
-  serif;
+  21px/1.25 var(--font-display);
 }
 .note > span:last-child:not(.eyebrow) {
   font-size: 11px;
@@ -225,8 +219,7 @@ a.note:hover {
 }
 h2 {
   font:
-  30px/1.16 Georgia,
-  serif;
+  30px/1.16 var(--font-display);
   letter-spacing: -0.7px;
 }
 h2 em {
@@ -313,8 +306,7 @@ h2 em {
 }
 .service-list article > span {
   font:
-  italic 28px Georgia,
-  serif;
+  italic 28px var(--font-display);
   color: var(--deep);
 }
 .service-list h3 {
@@ -345,8 +337,7 @@ h2 em {
 }
 .project-caption p {
   font:
-  9px/1.5 "Courier New",
-  monospace;
+  9px/1.5 var(--font-mono);
   letter-spacing: 1px;
   margin-bottom: 5px;
 }
@@ -368,8 +359,7 @@ h2 em {
 }
 .more-work h3 {
   font:
-  italic 32px/1.2 Georgia,
-  serif;
+  italic 32px/1.2 var(--font-display);
 }
 .more-work p {
   font-size: 13px;
@@ -409,7 +399,7 @@ h2 em {
 }
 .project .titlebar,
 .taskbar {
-  background: linear-gradient(#8caae6, #0066ff 14%, #0050ee 65%, #003399);
+  background: linear-gradient(#8caae6, #0066ff 14%, var(--bar) 65%, var(--deep));
 }
 .project .titlebar span:first-child {
   overflow-wrap: anywhere;
@@ -465,19 +455,20 @@ h2 em {
   margin-right: 4px;
   vertical-align: middle;
 }
-.task.active {
-  background: #003399;
-  font-weight: bold;
+.task.active,
+.task:active {
+  background: var(--deep);
   border-color: #002775;
   box-shadow: inset 1px 2px 3px #002775;
+}
+.task.active {
+  font-weight: bold;
 }
 .task:hover {
   background: #0066ff;
 }
 .task:active {
-  background: #003399;
-  border-color: #002775;
-  box-shadow: inset 1px 2px 3px #002775;
+  background: var(--deep);
 }
 .taskbar a:focus-visible {
   outline-offset: -3px;
@@ -489,7 +480,7 @@ h2 em {
   margin-left: auto;
   padding: 0 20px;
   background: linear-gradient(#149fea, #0c80d4);
-  border-left: 1px solid #003399;
+  border-left: 1px solid var(--deep);
   box-shadow: inset 1px 0 #8caae6;
   font-size: 11px;
   white-space: nowrap;
@@ -646,21 +637,16 @@ h2 em {
     break-inside: avoid;
   }
   .titlebar {
-    background: #ece9d8;
+    background: var(--cream);
     color: black;
   }
-}
-
-.sectioncv {
-  max-width: 1120px;
-  margin: 0 auto;
 }
 
 .win-controls button {
   width: 22px;
   height: 20px;
-  border: 1px solid #003399;
-  background-color: #ece9d8;
+  border: 1px solid var(--deep);
+  background-color: var(--cream);
   font-weight: bold;
   font-size: 11px;
 }
@@ -671,33 +657,7 @@ h2 em {
 }
 
 .btn-min:hover, .btn-max:hover {
-  background-color: #d2ecff;
-}
-
-.cv-menu-bar {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  position: relative;
-  padding: 4px 12px;
-  background-color: #ece9d8;
-  border-bottom: 1px solid #b5b3a5;
-  font-size: 13px;
-}
-
-.cv-menu-bar a {
-  display: block;
-  padding: 4px 13px;
-  color: var(--ink);
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.cv-menu-bar a:hover,
-.cv-menu-bar a:focus-visible,
-.cv-menu-bar a[aria-current] {
-  background-color: #316ac5;
-  color: white;
+  background-color: var(--soft);
 }
 
 .menu-item {
@@ -726,27 +686,14 @@ h2 em {
 
 .cv-dropdown a {
   padding: 6px 10px;
-}
-
-.cv-menu-bar span {
-  padding: 4px 12px;
-}
-
-.cv-menu-bar span:hover {
-  background-color: #316ac5;
-  color: white;
+  white-space: nowrap;
 }
 
 h1 mark {
   background-color: #ffcc00;
-  color: #003399;
+  color: var(--deep);
   padding: 0 8px;
   border-radius: 4px;
-}
-
-.cv-window-content {
-  padding: 25px;
-  background: #fffef7;
 }
 
 .cv-header {
@@ -755,19 +702,18 @@ h1 mark {
   gap: 20px;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  border-bottom: 3px solid #101827;
+  border-bottom: 3px solid var(--ink);
 }
 
 .profile-pic img {
   width: 110px;
   height: 110px;
-  border: 2px solid #101827;
+  border: 2px solid var(--ink);
   border-radius: 50%;
   object-fit: cover;
 }
 
 .profile-info h1 {
-  margin: 0;
   color: var(--deep);
   font: 30px/1.2 var(--font-display);
 }
@@ -776,11 +722,10 @@ h1 mark {
   margin: 4px 0 10px;
   color: var(--ink);
   font: italic 15px/1.3 var(--font-display);
-  font-weight: normal;
 }
 
 .contact-info a {
-  color: #003399;
+  color: var(--deep);
   text-decoration: none;
 }
 
@@ -812,7 +757,6 @@ h1 mark {
 }
 
 .summary-text {
-  margin: 0;
   font-size: 13px;
 }
 
@@ -846,7 +790,7 @@ h1 mark {
   display: inline-block;
   padding: 2px 9px;
   border: 1px solid #808080;
-  background-color: #ece9d8;
+  background-color: var(--cream);
   font: 11px/1.5 var(--font-mono);
 }
 
@@ -865,15 +809,7 @@ h1 mark {
 }
 
 .skill-list li:hover {
-  background-color: #d2ecff;
-}
-
-.cv-footer {
-  max-width: 1000px;
-  margin: 15px auto 0;
-  text-align: center;
-  font-size: 10px;
-  color: #44546a;
+  background-color: var(--soft);
 }
 
 @media (max-width: 850px) {
